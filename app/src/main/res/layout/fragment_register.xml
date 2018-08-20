@@ -2,6 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            android:orientation="vertical">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -10,13 +19,15 @@
         android:textSize="30dp"
         android:background="@color/colorPrimary"/>
     <EditText
+        android:id="@+id/register_user_id"
+        android:hint="User Id"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:hint="User Id"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:drawableLeft="@drawable/personal"/>
     <EditText
+        android:id="@+id/register_name"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:hint="Name"
@@ -24,6 +35,7 @@
         android:drawableLeft="@drawable/person2"/>
 
     <EditText
+        android:id="@+id/register_age"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:hint="Age"
@@ -31,15 +43,19 @@
         android:layout_gravity="center"/>
 
     <EditText
+        android:id="@+id/register_password"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:hint="Password"
         android:drawableLeft="@drawable/pass"
         android:layout_gravity="center"/>
     <Button
+        android:id="@+id/register_register_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Register new Account"/>
+            </LinearLayout>
+    </ScrollView>
 
 
 </LinearLayout>

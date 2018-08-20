@@ -2,7 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:padding="30dp"
+         android:orientation="vertical">
+        <TextView
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:text="BMI"
@@ -10,6 +19,7 @@
         android:textSize="30dp"
         android:background="@color/colorPrimary"/>
     <EditText
+        android:id="@+id/bmi_height"
         android:layout_marginTop="20dp"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
@@ -17,12 +27,14 @@
         android:layout_gravity="center"
         android:drawableLeft="@drawable/height"/>
     <EditText
+        android:id="@+id/bmi_weight"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:hint="Weight(kg)"
         android:layout_gravity="center"
         android:drawableLeft="@drawable/weight"/>
     <Button
+        android:id="@+id/bmi_caculate_btn"
         android:text="CALCULATE"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
@@ -35,9 +47,12 @@
         android:hint="Your BMI"
         android:layout_gravity="center"/>
     <EditText
+        android:id="@+id/bmi_value"
         android:textSize="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:hint="26.55"/>
+        </LinearLayout>
+        </ScrollView>
 </LinearLayout>
